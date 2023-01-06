@@ -1,10 +1,12 @@
 package com.tencent.wxcloudrun.model;
 
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
+@Data
 @ConfigurationProperties(prefix = "weather.lfh")
 public class YmlProperties {
 
@@ -15,39 +17,11 @@ public class YmlProperties {
 
     private String CITY_NAME;
 
-    @Override
-    public String toString() {
-        return "YmlProperties{" +
-                "API_URL='" + API_URL + '\'' +
-                ", API_KEY='" + API_KEY + '\'' +
-                ", CITY_NAME='" + CITY_NAME + '\'' +
-                '}';
-    }
+    private String APP_ID;
 
-    public String getAPI_URL() {
-        return API_URL;
-    }
+    private String SECRET;
 
-    public void setAPI_URL(String API_URL) {
-        this.API_URL = API_URL;
-    }
+    private String TOKEN;
 
-    public String getAPI_KEY() {
-        return API_KEY;
-    }
-
-    public void setAPI_KEY(String API_KEY) {
-        this.API_KEY = API_KEY;
-    }
-
-    public String getCITY_NAME() {
-        return CITY_NAME;
-    }
-
-    public void setCITY_NAME(String CITY_NAME) {
-        this.CITY_NAME = CITY_NAME;
-    }
-
-    public YmlProperties() {
-    }
+    private String AES_KEY;
 }
