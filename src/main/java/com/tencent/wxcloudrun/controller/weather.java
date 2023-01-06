@@ -20,12 +20,12 @@ public class weather {
     private SimpleWeather simpleWeather;
 
 //    @Scheduled(cron = "0/2 * * * * ?")
-//    @GetMapping(value = "/api/weather")
-//    ApiResponse get() {
-//        //OBJ obj = simpleWeather.queryWeather();
-//        System.out.println("aaaaa");
-//        return ApiResponse.ok();
-//    }
+    @GetMapping(value = "/api/weather")
+    ApiResponse get() {
+        //OBJ obj = simpleWeather.queryWeather();
+        System.out.println("aaaaa");
+        return ApiResponse.ok("aaa");
+    }
 
 
 }
