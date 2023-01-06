@@ -15,3 +15,8 @@ spring:
 
 mybatis:
   mapper-locations: classpath*:mapper/*Mapper.xml
+weather:
+  lfh:
+    API_URL: http://apis.juhe.cn/simpleWeather/query
+    API_KEY: 5087c268c591551f7ffdf4b06cd30fce
+    CITY_NAME: "商丘"
