@@ -20,7 +20,9 @@ weather:
     API_URL: http://apis.juhe.cn/simpleWeather/query
     API_KEY: 5087c268c591551f7ffdf4b06cd30fce
     CITY_NAME: "商丘"
-    APP_ID: wxda15605caa310c14
-    SECRET: 56b04b1a4d89a7a482d6862af62a3fed
-    TOKEN: linfuhaoistoken
-    AES_KEY:
+wx:
+  mp:
+    app-id: wxda15605caa310c14
+    secret: 56b04b1a4d89a7a482d6862af62a3fed
+    token: linfuhaoistoken
+    aes-key:

@@ -17,11 +17,4 @@ public class YmlProperties {
 
     private String CITY_NAME;
 
-    private String APP_ID;
-
-    private String SECRET;
-
-    private String TOKEN;
-
-    private String AES_KEY;
 }
