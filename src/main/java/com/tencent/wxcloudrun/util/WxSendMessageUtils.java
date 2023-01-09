@@ -33,14 +33,16 @@ public class WxSendMessageUtils{
         //String url = "http://api.weixin.qq.com/cgi-bin/message/template/send";
         //拼接base参数
         System.out.println("调用的接口地址为:"+url);
-        Map<String, Object> sendBody = new HashMap<>();
-        sendBody.put("touser", openId);               // openId
-        //sendBody.put("url","www.baidu.com");          // 跳转url
-        sendBody.put("topcolor", "#FF0000");          // 顶色
-        sendBody.put("data", data);                   // 模板参数
-        sendBody.put("template_id", templateId);      // 模板Id
-        ResponseEntity<String> forEntity = restTemplate.postForEntity(url, sendBody, String.class);
-        System.out.println("响应："+forEntity.getBody());
+        ResponseEntity<String> forEntity=null;
+        for (int i = 0; i < openId.size(); i++) {
+            Map<String, Object> sendBody = new HashMap<>();
+            sendBody.put("touser", openId.get(i));               // openId
+            sendBody.put("topcolor", "#FF0000");          // 顶色
+            sendBody.put("data", data);                   // 模板参数
+            sendBody.put("template_id", templateId);      // 模板Id
+            forEntity = restTemplate.postForEntity(url, sendBody, String.class);
+            System.out.println("响应："+forEntity.getBody());
+        }
         return forEntity.getBody();
     }
 
