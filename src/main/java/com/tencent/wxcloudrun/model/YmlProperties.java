@@ -16,5 +16,4 @@ public class YmlProperties {
     private String API_KEY;
 
     private String CITY_NAME;
-
 }
