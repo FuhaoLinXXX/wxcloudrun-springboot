@@ -43,7 +43,7 @@ public class weather {
     @Autowired
     protected RestTemplate restTemplate;
     //表示每个月星期一到星期五下午4点50分执行
-    @Scheduled(cron = "0 25 14 ? * MON-FRI")
+    @Scheduled(cron = "0 05 15 ? * MON-FRI")
     public void sendOffWork() throws ExecutionException, InterruptedException {
         System.out.println("开始发送");
         //参数一发送类型，参数二是推送的对象OpenId
