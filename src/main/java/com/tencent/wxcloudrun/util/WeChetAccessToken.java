@@ -50,4 +50,7 @@ public class WeChetAccessToken {
             return WxChatCache.AccessToken.token;
         }
     }
+
+
+
 }

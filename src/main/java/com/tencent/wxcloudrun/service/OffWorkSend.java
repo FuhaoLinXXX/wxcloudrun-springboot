@@ -6,11 +6,14 @@ import com.tencent.wxcloudrun.model.WeChatTemplateMsg;
 import com.tencent.wxcloudrun.service.impl.WxChatService;
 import com.tencent.wxcloudrun.util.WxSendMessageUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
+
+@Service("OffWorkSend")
 public class OffWorkSend implements WxChatService {
     @Autowired
     protected WxSendMessageUtils wxSendMessageUtils;

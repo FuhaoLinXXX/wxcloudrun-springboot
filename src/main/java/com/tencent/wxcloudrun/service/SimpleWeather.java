@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 
 @Component
-
 public class SimpleWeather {
     @Resource
     YmlProperties ymlProperties;

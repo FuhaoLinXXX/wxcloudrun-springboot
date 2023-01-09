@@ -1,3 +1,4 @@
+/*
 package com.tencent.wxcloudrun.controller;
 
 import org.slf4j.Logger;
@@ -16,9 +17,11 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.List;
 
+*/
 /**
  * counter控制器
- */
+ *//*
+
 @RestController
 
 public class CounterController {
@@ -32,10 +35,12 @@ public class CounterController {
   }
 
 
-  /**
+  */
+/**
    * 获取当前计数
    * @return API response json
-   */
+   *//*
+
   @GetMapping(value = "/api/count")
   ApiResponse get() {
     logger.info("/api/count get request");
@@ -49,11 +54,13 @@ public class CounterController {
   }
 
 
-  /**
+  */
+/**
    * 更新计数，自增或者清零
    * @param request {@link CounterRequest}
    * @return API response json
-   */
+   *//*
+
   @PostMapping(value = "/api/count")
   ApiResponse create(@RequestBody CounterRequest request) {
     logger.info("/api/count post request, action: {}", request.getAction());
@@ -79,5 +86,5 @@ public class CounterController {
       return ApiResponse.error("参数action错误");
     }
   }
-  
-}
+
+}*/
