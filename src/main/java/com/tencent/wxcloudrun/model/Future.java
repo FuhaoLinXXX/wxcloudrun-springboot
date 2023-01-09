@@ -1,9 +1,11 @@
 package com.tencent.wxcloudrun.model;
 
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.Date;
 @Data
+@ToString
 public class Future {
     /**
      * 日期
