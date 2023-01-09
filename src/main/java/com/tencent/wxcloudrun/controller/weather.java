@@ -39,7 +39,7 @@ public class weather {
     private ApplicationContext applicationContext;
 
     //表示每个月星期一到星期五下午4点50分执行
-    @Scheduled(cron = "0 0 11 ? * MON-FRI")
+    @Scheduled(cron = "0 10 11 ? * MON-FRI")
     public void sendOffWork() throws ExecutionException, InterruptedException {
         System.out.println("开始发送下班提醒");
         //参数一发送类型，参数二是推送的对象OpenId
