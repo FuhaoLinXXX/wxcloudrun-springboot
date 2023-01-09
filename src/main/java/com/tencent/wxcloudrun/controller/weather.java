@@ -27,17 +27,6 @@ import java.util.concurrent.ExecutionException;
 @EnableScheduling
 public class weather {
 
-    @Resource
-    private SimpleWeather simpleWeather;
-
-//    @Scheduled(cron = "0/2 * * * * ?")
-//    @GetMapping(value = "/api/weather")
-//    ApiResponse get() {
-//        OBJ obj = simpleWeather.queryWeather();
-//        String s = JSON.toJSONString(obj);
-//        System.out.println(s);
-//        return ApiResponse.ok(s);
-//    }
 
     //上下文，用于策略模式获取对应策略
     @Autowired
@@ -46,6 +35,7 @@ public class weather {
     protected RestTemplate restTemplate;
     //表示每个月星期一到星期五下午4点50分执行
     @Scheduled(cron = "0 05 15 ? * MON-FRI")
+    @GetMapping("/get")
     public void sendOffWork() throws ExecutionException, InterruptedException {
         System.out.println("开始发送");
         //参数一发送类型，参数二是推送的对象OpenId
