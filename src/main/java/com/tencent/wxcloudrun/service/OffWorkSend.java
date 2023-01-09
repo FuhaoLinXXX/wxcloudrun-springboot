@@ -26,11 +26,11 @@ public class OffWorkSend implements WxChatService {
         Map<String, WeChatTemplateMsg> sendMag = new HashMap<String, WeChatTemplateMsg>();
         OBJ obj = simpleWeather.queryWeather();
         sendMag.put("info",new WeChatTemplateMsg(obj.getWeather().getInfo(),"#b89485"));
-        sendMag.put("temperature",new WeChatTemplateMsg(obj.getWeather().getInfo(),"#b89485"));
-        sendMag.put("humidity",new WeChatTemplateMsg(obj.getWeather().getInfo(),"#b89485"));
-        sendMag.put("direct",new WeChatTemplateMsg(obj.getWeather().getInfo(),"#b89485"));
-        sendMag.put("power",new WeChatTemplateMsg(obj.getWeather().getInfo(),"#b89485"));
-        sendMag.put("aqi",new WeChatTemplateMsg(obj.getWeather().getInfo(),"#b89485"));
+        sendMag.put("temperature",new WeChatTemplateMsg(obj.getWeather().getTemperature(),"#b89485"));
+        sendMag.put("humidity",new WeChatTemplateMsg(obj.getWeather().getHumidity(),"#b89485"));
+        sendMag.put("direct",new WeChatTemplateMsg(obj.getWeather().getDirect(),"#b89485"));
+        sendMag.put("power",new WeChatTemplateMsg(obj.getWeather().getPower(),"#b89485"));
+        sendMag.put("aqi",new WeChatTemplateMsg(obj.getWeather().getAqi(),"#b89485"));
 //        sendMag.put("date",new WeChatTemplateMsg(obj.getWeather().getInfo(),"#b89485"));
 //        sendMag.put("temperature",new WeChatTemplateMsg(obj.getWeather().getInfo(),"#b89485"));
 //        sendMag.put("weather",new WeChatTemplateMsg(obj.getWeather().getInfo(),"#b89485"));
