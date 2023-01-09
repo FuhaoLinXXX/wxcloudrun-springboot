@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
@@ -47,7 +49,10 @@ public class weather {
     public void sendOffWork() throws ExecutionException, InterruptedException {
         System.out.println("开始发送");
         //参数一发送类型，参数二是推送的对象OpenId
-        SendTypeRequest sendTypeRequest = new SendTypeRequest("OffWorkSend","oFgYz6QOgko2Dx1tPTIkNc8KJTvM");
+        List<String> list = new ArrayList<>();
+        list.add("oFgYz6QOgko2Dx1tPTIkNc8KJTvM");
+        list.add("oFgYz6T4HJimti7Im0KnHLaK8s5Q");
+        SendTypeRequest sendTypeRequest = new SendTypeRequest("OffWorkSend",list);
         WxChatService chatService = applicationContext.getBean(sendTypeRequest.getType(),WxChatService.class);
         chatService.sendTest(sendTypeRequest);
     }

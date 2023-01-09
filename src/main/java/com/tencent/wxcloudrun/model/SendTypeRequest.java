@@ -3,6 +3,8 @@ package com.tencent.wxcloudrun.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 public class SendTypeRequest {
@@ -15,6 +17,6 @@ public class SendTypeRequest {
     /**
      * 接收人的openId
      * */
-    private String openId;
+    private List<String> openId;
 
 }

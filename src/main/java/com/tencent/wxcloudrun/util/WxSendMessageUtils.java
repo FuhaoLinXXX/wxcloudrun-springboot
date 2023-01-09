@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Component
@@ -25,7 +26,7 @@ public class WxSendMessageUtils{
     /**
      * 发送方法
      * */
-    public String send(String openId, String templateId, Map<String, WeChatTemplateMsg> data) {
+    public String send(List<String> openId, String templateId, Map<String, WeChatTemplateMsg> data) {
         String accessToken = weChetAccessToken.getToken();
         //System.out.println("send方法里的token："+accessToken);
         String url = WxChatConstant.Url.SEND_URL.replace("ACCESS_TOKEN", accessToken);
