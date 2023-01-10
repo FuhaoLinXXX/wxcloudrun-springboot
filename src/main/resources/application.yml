@@ -23,7 +23,7 @@ weather:
 
 wx:
   mp:
-    app_id: h_9f5f3db43264
-    secret: 225b13166e2904b81ebb6cb86e0b1616
+    app_id: wxda15605caa310c14
+    secret: b216f926957bb3f3011103f812f165a5
     token: linfuhaoistoken
-    aes-key: jlj8Z8LRARVmXCMq0Ng1FESyp3hptDzFzCSRnmGf1au
+    aes-key:

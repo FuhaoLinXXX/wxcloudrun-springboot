@@ -1,4 +1,3 @@
-/*
 package com.tencent.wxcloudrun.controller;
 
 import lombok.extern.slf4j.Slf4j;
@@ -36,7 +35,6 @@ public class WeChatGetUserInfoController {
 //        return url;
     }
 
-    */
 /**
      * 网页授权
      * 1 第一步：用户同意授权，获取code
@@ -48,8 +46,8 @@ public class WeChatGetUserInfoController {
      * 4 第四步：拉取用户信息(需scope为 snsapi_userinfo)
      *
      * @param code
-     * @return
-     *//*
+     * @return*/
+
 
     @GetMapping("/getRedirectUserInfo")
     @ResponseBody
@@ -66,4 +64,3 @@ public class WeChatGetUserInfoController {
 
 }
 
-*/

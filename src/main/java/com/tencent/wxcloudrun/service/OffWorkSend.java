@@ -48,7 +48,9 @@ public class OffWorkSend implements WxChatService {
 
 
         // 发送
-        wxSendMessageUtils.send(send.getOpenId(), templateId, sendMag);
-
+        List<String> openId = send.getOpenId();
+        for (int i = 0; i < openId.size(); i++) {
+            wxSendMessageUtils.send(openId.get(i), templateId, sendMag);
+        }
     }
 }
